@@ -16,3 +16,10 @@ and tests.
 
 This project uses sanitized local HTML fixtures from the `examples/` directory.
 They are fictional and do not represent any real website or collected dataset.
+
+## Database schema
+
+The demo uses SQLite for portability. Catalog titles are stored in a normalized
+schema with lookup tables for genres, countries, persons, and collections.
+Many-to-many relation tables link titles to those lookup records, and title
+upserts avoid duplicate titles or duplicate relation rows.
