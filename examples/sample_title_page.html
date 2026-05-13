@@ -2,21 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Example Feature</title>
+    <title>Example Movie</title>
   </head>
   <body>
-    <main data-source-id="sample-title-1">
-      <h1>Example Feature</h1>
-      <p class="original-title">Original Example Feature</p>
-      <p class="description">A fictional catalog item used for parser tests.</p>
-      <dl>
-        <dt>Release year</dt>
-        <dd>2024</dd>
-        <dt>Duration</dt>
-        <dd>1h 42m</dd>
-        <dt>Age rating</dt>
-        <dd>PG</dd>
-      </dl>
+    <main data-source-id="demo-001">
+      <h1 data-field="title">Example Movie</h1>
+      <p data-field="original-title">Original Example Movie</p>
+      <div data-field="description">A fictional demo movie used for parser tests.</div>
+      <span data-field="release-year">2024</span>
+      <span data-field="duration">1h 42m</span>
+      <span data-field="age-rating">16+</span>
+      <img data-field="poster" src="https://example.com/posters/demo-001.webp" alt="">
+      <a data-field="trailer" href="https://example.com/trailers/demo-001">Trailer</a>
+
+      <ul data-field="genres">
+        <li>Drama</li>
+        <li>Adventure</li>
+      </ul>
+
+      <ul data-field="countries">
+        <li>France</li>
+        <li>Ukraine</li>
+      </ul>
+
+      <ul data-field="actors">
+        <li>Alex Demo</li>
+        <li>Maria Sample</li>
+      </ul>
+
+      <ul data-field="directors">
+        <li>John Example</li>
+      </ul>
+
+      <ul data-field="collections">
+        <li>Demo Collection</li>
+      </ul>
     </main>
   </body>
 </html>

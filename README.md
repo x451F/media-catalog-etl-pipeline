@@ -11,3 +11,8 @@ data dumps.
 
 Initial public project scaffold with configuration, models, utilities, examples,
 and tests.
+
+## Demo fixtures
+
+This project uses sanitized local HTML fixtures from the `examples/` directory.
+They are fictional and do not represent any real website or collected dataset.
