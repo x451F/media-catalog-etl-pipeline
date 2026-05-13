@@ -12,6 +12,23 @@ data dumps.
 Initial public project scaffold with configuration, models, utilities, examples,
 and tests.
 
+## Setup
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e ".[dev]"
+```
+
+## Usage
+
+```bash
+python -m media_catalog_etl.cli run-demo
+python -m media_catalog_etl.cli inspect-db
+pytest
+ruff check .
+```
+
 ## Demo fixtures
 
 This project uses sanitized local HTML fixtures from the `examples/` directory.
@@ -23,3 +40,13 @@ The demo uses SQLite for portability. Catalog titles are stored in a normalized
 schema with lookup tables for genres, countries, persons, and collections.
 Many-to-many relation tables link titles to those lookup records, and title
 upserts avoid duplicate titles or duplicate relation rows.
+
+## Example output
+
+```text
+Initialized database: catalog.sqlite3
+Parsed 2 demo titles
+Inserted/updated 2 titles
+Linked genres, countries, persons, and collections
+Done.
+```
