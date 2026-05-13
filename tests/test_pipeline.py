@@ -17,5 +17,8 @@ def test_run_demo_pipeline_creates_database_and_titles(tmp_path) -> None:
         assert result.parsed_titles == 2
         assert result.inserted_or_updated_titles == 2
         assert await storage.count_titles() == 2
+        assert [
+            summary["title"] for summary in await storage.get_title_summary()
+        ] == ["Example Movie", "Sample Series"]
 
     asyncio.run(run_test())
